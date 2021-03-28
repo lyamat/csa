@@ -45,8 +45,7 @@ int main(int argc, const char * argv[]) {
     test_get_bit(0b11011,3,1);
     test_get_bit(0b11011,2,0);
     test_get_bit(0b11011,9,0);
-    std::cout << "\nТестирование set_bit()\n\n";
-    test_get_bit(0b1001110,0,0);
+    std::cout << "\nТестирование set_bit()\n\n";    
     test_set_bit(0b1001110,2,0,0b1001010);
     test_set_bit(0b1101101,0,0,0b1101100);
     test_set_bit(0b1001110,2,1,0b1001110);
