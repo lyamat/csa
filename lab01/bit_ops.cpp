@@ -11,13 +11,13 @@ unsigned get_bit(unsigned x,
 void set_bit(unsigned *x,
              unsigned n,
              unsigned v) {
-             unsigned mask = 1 << n;
-             *x = (*x & ~mask) | (v << n);
+             unsigned mask = ~(1 << n);
+             *x = (*x & mask) | (v << n);
 }
 // Меняет значение бита номер n на противоположное.
 // Предполагается что 0 <= n <= 31
 void flip_bit(unsigned *x,
               unsigned n) {
               unsigned mask = 1 << n;
-              *x = (*x ^= mask);
+              *x ^= mask;
 }
